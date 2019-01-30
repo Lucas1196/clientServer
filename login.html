@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LOGIN</title>
+        <style>
+            .content {
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+            }
+            form {
+                text-align:center;
+            }
+            input {
+                padding:7px 100px 7px 10px; 
+                display:block;
+                margin:10px auto;
+                border:none;
+            }
+            button {
+                cursor:pointer;
+                background-color:blue;
+                border:none;
+                color:white;
+                margin-top:15px;
+                padding:7px 35px;
+            }
+        </style>
+    </head>
+
+    <body style="background-color:beige;">
+
+        <div class="content">
+            <form id="myForm" action="javascript:submit();" method="post"> 
+                <input type="text" name="Username" placeholder="Enter your username" maxlength="60" id="username-input" required>
+                <input type="password" name="Password" placeholder="Enter your password" maxlength="40" id="password" required>
+                <button onclick="submit();" type="button" class="submit" name="Send">
+                    Trimite
+                </button>
+                <input type="submit" style="display:none;">
+            </form>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="login.js"></script>
+    </body>
+    
+</html>

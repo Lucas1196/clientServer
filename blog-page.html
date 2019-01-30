@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LOGIN</title>
+        <style>
+            .log-section {
+                position:absolute;
+                top:50px;
+                right:50px;
+                text-align:center;
+                text-transform:uppercase;
+                letter-spacing:1px;
+            }
+            .log-section #logged {
+                cursor:default;
+                background-color:#fe7400;
+                padding:5px 20px;
+                display:inline-block;
+                vertical-align:top;
+                color:white;
+            }
+            .log-section form {
+                display:inline-block;
+                vertical-align:top;
+            }
+            .log-section button {
+                cursor:pointer;
+                margin-left:25px;
+                padding:6px 20px 7px;
+                border:none;
+                color:white;
+                background-color:orangered;
+            }
+            .log-section button:focus {
+                background-color:olive;
+            }
+            #welcome-content {
+                opacity:0;
+                transition:all 0.3s ease-in 0.5s;
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                padding:20px 100px;
+                background-color:rosybrown;
+                z-index:44;
+                text-align:center;
+            }
+            #welcome-content p {
+                margin:0px;
+                display:inline-block;
+            }
+            .d-none {
+                display:none;
+            }
+        </style>
+    </head>
+
+    <body id="logged-page" class="text-align:center;" style="background-color:peachpuff; opacity:0.8;">
+        <div id="welcome-content">
+            Welcome
+            <p id="welcome">
+
+            </p>
+        </div>
+        <div class="log-section">
+            <div id="logged">
+
+            </div>
+            <form method="post">
+                <button type="button" id="logout">
+                    LOG OUT
+                </button>
+            </form>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="logged.js"></script>
+    </body>
+
+</html>

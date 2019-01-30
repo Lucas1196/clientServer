@@ -1,0 +1,22 @@
+{
+  "name": "clientserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucas1196/clientServer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucas1196/clientServer/issues"
+  },
+  "homepage": "https://github.com/Lucas1196/clientServer#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
