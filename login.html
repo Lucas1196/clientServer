@@ -6,48 +6,132 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>LOGIN</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="reset.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,500,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
         <style>
-            .content {
-                position:absolute;
+            body {
+                background-color:beige;
+            }
+            #containerLogin {
+                position:fixed;
                 top:50%;
                 left:50%;
                 transform:translate(-50%,-50%);
             }
-            form {
-                text-align:center;
-            }
-            input {
-                padding:7px 100px 7px 10px; 
-                display:block;
-                margin:10px auto;
-                border:none;
+            #containerLogin form {
+                background-color:rgba(255,255,255,0.7);
+                padding:90px 0px;
             }
             button {
                 cursor:pointer;
-                background-color:blue;
+                display:inline-block;
                 border:none;
-                color:white;
+                margin:30px auto 0px;
+                padding:9px 60px 10px;
+                background-color:#5eaef2;
+                color:#fff;
+                letter-spacing:1px;
+            }
+            .input-group {
+                margin-bottom:20px;
+            }
+            input {
+                display:block;
+                width:100%;
+                margin:10px 0px 0px;
+                padding:7px 20px 7px 10px;
+                border:1px solid #5eaef2;
+                font-size:12px;
+            }
+            button.submit {
+                margin-top:50px !important;
+            }
+            label {
+                display:block;
+                width:80%;
+                margin:auto;
+                text-align:left;
+                color:#158ef5;
+                font-family: 'Noto Serif SC', serif;
+                font-weight:400;
+                font-size:14px;
+                letter-spacing:0.6px;
+                margin-bottom:10px;
+                text-transform:uppercase;
+            }
+            .noAccount {
                 margin-top:15px;
-                padding:7px 35px;
+                font-family: 'Noto Serif SC', serif;
+                font-weight:500;
+                font-size:12px;
+                letter-spacing:0.5px;
+            }
+            .btn-register {
+                padding:10px;
+                display:inline-block;
+                color:#f90000;
+                font-size:14px;
+                text-transform:uppercase;
+                transition:all 0.7s ease-in 0s;
+            }
+            .btn-register:hover {
+                transform: rotate(360deg);
+                text-decoration:none;
+                color:#f90000;
+            }
+            .dangerError {
+                width:80%;
+                margin:auto;
+                color:red;
+                font-family: 'Noto Serif SC', serif;
+                font-weight:600;
+                font-size:13px;
+                letter-spacing:0.5px;
+            }
+            .password-state {
+                width:80%;
+                margin:auto;
+                height:7px;
+            }
+            .col {
+                opacity:0;
+                transition:all 0.3s ease-in 1s;
+            }
+            .col:nth-child(1) {
+                background-color:red;
+                width:0%;
+            }
+            .col:nth-child(2) {
+                background-color:red;
+                width:0%;
+            }
+            .col:nth-child(3) {
+                background-color:red;
+                width:0%;
+            }
+            .show {
+                opacity:1;
+                transition:all 0.3s ease-in 0s;
+                width:100%;
             }
         </style>
     </head>
 
-    <body style="background-color:beige;">
+    <body class="position-relative">
 
-        <div class="content">
-            <form id="myForm" action="javascript:submit();" method="post"> 
-                <input type="text" name="Username" placeholder="Enter your username" maxlength="60" id="username-input" required>
-                <input type="password" name="Password" placeholder="Enter your password" maxlength="40" id="password" required>
-                <button onclick="submit();" type="button" class="submit" name="Send">
-                    Trimite
-                </button>
-                <input type="submit" style="display:none;">
-            </form>
+        <div id="containerLogin" class="container text-center">
+          
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-        <script src="login.js"></script>
+        <!-- Load React. -->
+        <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+        <!-- Babel for convert JSX to JS -->
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script src="login.js" type="text/javascript"></script>
     </body>
     
 </html>
